@@ -1,0 +1,7 @@
+<p>parent works!</p>
+
+<app-child [username]="username" [userObj]="userObj"></app-child>
+
+<input type="text" [(ngModel)]="username">
+
+<button (click)="onUpdateUserObject()"> Update user object</button>
