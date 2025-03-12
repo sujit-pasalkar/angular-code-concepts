@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-code-concepts": "node dist/angular-code-concepts/server/server.mjs"
+    "serve:ssr:angular-code-concepts": "node dist/angular-code-concepts/server/server.mjs",
+    "build:stats":"ng build --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/angular-code-concepts/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -21,8 +23,11 @@
     "@angular/platform-server": "^19.0.0",
     "@angular/router": "^19.0.0",
     "@angular/ssr": "^19.0.6",
+    "@tailwindcss/postcss": "^4.0.9",
     "express": "^4.18.2",
+    "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.0.9",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
@@ -39,6 +44,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.6.2"
+    "typescript": "~5.6.2",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }

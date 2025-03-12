@@ -1,0 +1,23 @@
+
+<!-- @appCustom1 (true) {} -->
+
+<section *appCustom1="show">
+    <!-- *appCustom1="show" -->
+    <header>
+        <input type="text" name="expression" id="expression" readonly [(ngModel)]="expression">
+        <hr>
+        <div>
+            {{output}}
+        </div>
+    </header>
+
+    <aside>
+        <div class="flex flex-row ">
+            <button class="button w-25" type="button">clear</button>
+            <button class="button w-25" type="button">X</button>
+
+        </div>
+    </aside>
+    <button type="button" (click)="showCalc()">Show Calculator </button>
+</section>
+
